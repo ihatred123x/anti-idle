@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "anti-idle": {
+      "commandName": "Project",
+      "commandLineArgs": "--timeout=5000"
+    }
+  }
+}
