@@ -17,10 +17,12 @@ namespace anti_idle
             var x = new Random(900);
             var y = new Random(600);
             var interval = args.SingleOrDefault(arg => arg.StartsWith("--timeout")).Split("=")[1];
-            do {
+            do 
+            {
                 var xDelta = x.Next(1000); // x axis 
                 var yDelta = y.Next(550); // y axis
 
+                Console.WriteLine($"moving mouse to {xDelta} - {yDelta}");
                 VirtualMouse.SetCursorPos(xDelta, yDelta);
                 VirtualMouse.LeftClick(xDelta, yDelta);
 
